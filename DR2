@@ -1,0 +1,56 @@
+#include <Wire.h #include <Adafruit GFX.h>
+
+#include "Adafruit_LEDBackpack.h"
+
+Declaration de la Matrice 8x8 Bicolor
+
+Adafruit BicolorMatrix matrix Adafruit BicolorMatrix();
+
+Fonction d'initialisation du système
+
+void setup()
+
+matrix0.begin(0x70); // Adresse 12C de la matrice
+
+static const uint8 PROGMEM
+
+Declaration d'ecran pour la Matrice 8x8 Bicolor
+
+smile bmp[]
+
+neutral_bmp[]-
+
+{B00111100, 801000010, 810100101, B10000001, B10100101, 810011001, 801000010, 800111100). (B00111100, B01000010, B10100101, 810000001, 810111101, B10000001, B01000010, 8001111001. frown bmp- (B00111100, 801000010, B10100101, B10000001, B10011001, 810100101, 801000010, B00111100); Fonction boucle du programme
+
+void loop()
+
+// Orientation de l'affichage matrix0.setRotation(1);
+
+//Affichage d'une forme predefinie matrix0.clear(); // effacement ecran matrix0.drawBitmap(0, 0, smile_bmp, 8, 8, LED_GREEN); matrix0.writeDisplay(); // ecriture sur l'ecran delay(1000);
+
+//Affichage d'une forme predefinie matrix0.clear(); // effacement ecran matrix0.drawBitmap(0, 0, neutral_bmp, 8, 8, LED YELLOW); matrix0.writeDisplay(); // ecriture sur l'ecran
+
+delay(1000);
+
+// Affichage d'une forme prodefinie matrix0.clear(); // effacement ceran matrix0.draw Bitmap(0, 0, frown bmp, 8, 8, LED_RED); matrix0.writeDisplay(); // ecriture sur l'ecran delay(1000);
+
+// Affichage d'un pixel matrix0.clear(); // effacement ecran
+matrix0.drawPixel(0, 0, LED GREEN). matrix0. writeDisplay(), // ecriture sur Fecran delay(1000);
+
+Affichage d'une ligne
+
+matrix0.clear(). #effacement ecran matrix0.drawLine(0,0, 7,7, LED YELLOW); matrix.writeDisplay(); // ecriture sur Tecran delay(1000);
+
+//Affichage d'un rectangle vide et d'un rectangle plein matrix0.clear(); // effacement ecran
+
+matrix0.drawRect(0,0, 8,8, LED RED), matrix.fillRect(2,2,4,4, LED GREEN),
+
+matrix0.writeDisplay(); // ecriture sur l'ecran delay(1000); //Affichage d'un cercle
+
+matrix0.clear(); //effacement ecran matrix0.drawCircle(3,3, 3, LED_YELLOW); matrix0.writeDisplay(); // ecriture sur l'ecran delay(1000);
+
+//Affichage d'un texte horizontal
+
+matrix0.setTextWrap(false), matrix0.setTextSize(1); matrix0.setTextColor(LED_GREEN); for (int8_t x-7; x-58; x-) ( matrix0.clear(); // effacement ecran matrix0.setCursor(x,0); matrix.print("BAC PRO SN"); matrix0.writeDisplay(); // ecriture sur l'ecran delay(100);
+
+//Affichage d'un texte vertical matrix).setRotation(0); matrix0.setTextColor(LED RED); for (int8_t x=7; x-58; x-) { matrix0.clear(); // effacement ecran matrix).setCursor(x,0); matrix.print("BAC PRO SN"); matrix0.writeDisplay(); // ecriture sur l'ecran delay(200);
